@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>All Products : Aling Nena </title>
+    <title>Confirm</title>
 
     <!-- Bootstrap core CSS -->
     <link href="/css/bootstrap.min.css" rel="stylesheet">
@@ -35,19 +35,19 @@
     </div>
 	<h1>Order for <%= "#{@products.name}" %> Successful!</h1>
 	<br />
-	<h2>Total Amount Paid: </h2>
 	<h2>Your total is: <%= "#{@products_total}" %></h2>
+	<h2>Total Amount Paid: <%= "#{@calc.total_paid}" %></h2>
 	<h2>Quantity ordered: <%= "#{@products_quantity}" %></h2>
-	<h2>Your change is: </h2>
+	<h2>Your change is: <%= "#{@change}" %></h2>
 	<h2>In the form of: </h2>
-	<h3>Ones: <%= "#{@paid_ones}" %></h3>
-	<h3>Fives: <%= "#{@change_fives}" %></h3>
-	<h3>Tens: <%= "#{@change_tens}" %></h3>
-	<h3>Twenties: <%= "#{@change_twenties}" %></h3>
-	<h3>Fifties: <%= "#{@change_fifties}" %></h3>
-	<h3>Hundreds: <%= "#{@change_hundreds}" %></h3>
-	<h3>Five Hundreds: <%= "#{@change_five_hundreds}" %></h3>
-	<h3>Thousands: <%= "#{@change_thousands}" %></h3>
+	<h3>Ones: <%= "#{@calc.change(@products_total)[:ones]}" %></h3>
+	<h3>Fives: <%= "#{@calc.change(@products_total)[:fives]}" %></h3>
+	<h3>Tens: <%= "#{@calc.change(@products_total)[:tens]}" %></h3>
+	<h3>Twenties: <%= "#{@calc.change(@products_total)[:twenties]}" %></h3>
+	<h3>Fifties: <%= "#{@calc.change(@products_total)[:fifties]}" %></h3>
+	<h3>Hundreds: <%= "#{@calc.change(@products_total)[:hundreds]}" %></h3>
+	<h3>Five Hundreds: <%= "#{@calc.change(@products_total)[:five_hundreds]}" %></h3>
+	<h3>Thousands: <%= "#{@calc.change(@products_total)[:thousands]}" %></h3>
 	<br />
 	<a href="/" class="btn btn-default">Home</a>
 	<a href="/products" class="btn btn-default">Back to Product List</a>

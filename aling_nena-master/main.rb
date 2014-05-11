@@ -26,14 +26,18 @@ get '/products' do
 	erb :products
 end
 
-get '/order/result/:id' do
+post '/order/result/:id' do
 	@products = Item.find(params[:id])
-	@products_quantity = params[:choice].to_i
+	@products_quantity = params[:quantity].to_i
 	@products_total = @products.price.to_i * @products_quantity.to_i
 	
+	@calc = MoneyCalculator.new(params[:select_ones].to_i, params[:select_fives].to_i, params[:select_tens].to_i, params[:select_twenties].to_i, params[:select_fifties].to_i, params[:select_hundreds].to_i, params[:select_five_hundreds].to_i, params[:select_thousands].to_i)
+	@calc.change(@products_total)
+	@change = @calc.total_paid - @products_total
+	
 	@products.update_attributes!(
-    quantity: (@products.quantity - params[:select_quantity].to_i),
-    sold: (@products.sold + params[:select_quantity].to_i)
+    quantity: (@products.quantity - params[:quantity].to_i),
+    sold: (@products.sold + params[:quantity].to_i)
     )
 	
 	erb :order_result

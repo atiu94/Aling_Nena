@@ -9,7 +9,7 @@ class MoneyCalculator
 	
 	@ones = ones.to_i
 	@fives = fives.to_i
-	@tens = ten.to_i
+	@tens = tens.to_i
 	@twenties = twenties.to_i
 	@fifties = fifties.to_i
 	@hundreds = hundreds.to_i
