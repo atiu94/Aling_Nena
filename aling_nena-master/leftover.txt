@@ -1,0 +1,8 @@
+	@calc = MoneyCalculator.new(params:[select_ones], params:[select_fives], params:[select_tens], params:[select_twenties], params:[select_fifties], params:[select_hundreds], params:[select_five_hundreds], params:[select_thousands])
+
+
+<% @display_products.each do |products| %>
+	<tr>
+		<td><a href="/order/<%= products.id %>"><%= products.name %></a></td>
+	</tr>
+	<% end %>

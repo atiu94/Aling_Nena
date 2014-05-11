@@ -1,0 +1,63 @@
+body {
+	padding-top: 50px;
+	font-size: 20px;
+	font-family: 'Gills Sans MT';
+	text-align: center;
+	background-color: #CC0000;
+	color: white
+}
+.admin {
+	padding: 40px 15px;
+	text-align: center;
+}
+
+.table-striped>tbody>tr:nth-child(odd)>td, .table-striped>tbody>tr:nth-child(odd)>th{
+	background-color: #CC0000;
+	border-color: #CC0000;
+}
+
+.btn-primary{
+	background-color: #ffed90;
+	border-color: yellow;
+	color: black;
+	font-family: 'Impact';
+}
+
+.navbar{
+	font-family: 'Geogrotesque lg';
+	color: white;
+	float: right;
+}
+
+h1 {
+	font-family: 'Geogrotesque lg';
+}
+
+.navbar-inverse .navbar-brand{
+	color: white;
+	font-size: 30px;
+}
+
+a {
+	color: white;
+}
+
+h2 {
+	font-family: 'Geogrotesque lg';
+	font-size: 50px;
+}
+
+select_quantity {
+	color: black;
+}
+
+.btn-default{
+	background-color: #ffed90;
+	border-color: yellow;
+	color: black;
+	font-family: 'Impact';
+}
+
+img{
+	float: right;
+}
